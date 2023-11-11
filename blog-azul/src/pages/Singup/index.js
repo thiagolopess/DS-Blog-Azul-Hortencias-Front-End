@@ -1,7 +1,7 @@
 import React from "react";
 
 const Singup = () => {
-    return <div>App</div>;
+    return <div>Singup</div>;
 };
 
 export default Singup;
