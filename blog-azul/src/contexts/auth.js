@@ -72,5 +72,3 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
-
-//alterar na integração com o back
