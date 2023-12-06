@@ -31,7 +31,7 @@ const Signin = () => {
 
   return (
     <C.Container>
-      <C.Label>SISTEMA DE LOGIN</C.Label>
+      <C.Label>Sistema Alvorecer Feudal</C.Label>
       <C.Content>
         <Input
           type="email"
@@ -51,6 +51,12 @@ const Signin = () => {
           Não tem uma conta?
           <C.Strong>
             <Link to="/signup">&nbsp;Registre-se</Link>
+          </C.Strong>
+        </C.LabelSignup>
+        <C.LabelSignup>
+          Esqueceu sua senha?
+          <C.Strong>
+            <Link to="/recovery">&nbsp;Recupere aqui</Link>
           </C.Strong>
         </C.LabelSignup>
       </C.Content>

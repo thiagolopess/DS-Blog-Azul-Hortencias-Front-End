@@ -9,13 +9,15 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [emailConf, setEmailConf] = useState("");
   const [senha, setSenha] = useState("");
+  const [feudo, setFeudo] = useState(""); // Adicionando estado para 'feudo'
+  const [funcao, setFuncao] = useState(""); // Adicionando estado para 'funcao'
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const { signup } = useAuth();
 
   const handleSignup = () => {
-    if (!email | !emailConf | !senha) {
+    if (!email || !emailConf || !senha || !feudo || !funcao) {
       setError("Preencha todos os campos");
       return;
     } else if (email !== emailConf) {
@@ -30,7 +32,7 @@ const Signup = () => {
       return;
     }
 
-    alert("Usuário cadatrado com sucesso!");
+    alert("Usuário cadastrado com sucesso!");
     navigate("/");
   };
 
@@ -55,6 +57,18 @@ const Signup = () => {
           placeholder="Digite sua Senha"
           value={senha}
           onChange={(e) => [setSenha(e.target.value), setError("")]}
+        />
+          <Input
+          type="text"
+          placeholder="Digite seu Feudo"
+          value={feudo}
+          onChange={(e) => [setFeudo(e.target.value), setError("")]}
+        />
+          <Input
+          type="text"
+          placeholder="Digite sua função no Feudo"
+          value={funcao}
+          onChange={(e) => [setFuncao(e.target.value), setError("")]}
         />
         <C.labelError>{error}</C.labelError>
         <Button Text="Inscrever-se" onClick={handleSignup} />
