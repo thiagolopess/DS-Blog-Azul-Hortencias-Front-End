@@ -32,7 +32,7 @@ const Signin = () => {
   return (
     <C.Container>
       <C.BLabel>BEM-VINDO!</C.BLabel>
-      <C.TLabel>Bem-vindo ao Blog Azul Hortênsia, o epicentro da interação no Reino Alvorecer Feudal! Nossa missão é estreitar os laços entre os usuários deste vasto reino, trazendo-lhes as mais recentes novidades e eventos. Aqui, você encontrará um fórum de perguntas e respostas, uma página dedicada a sanar suas dúvidas mais profundas sobre a vida no reino.</C.TLabel>
+      <C.TLabel>Bem-vindo ao Blog Azul Hortênsias, o epicentro da interação no Reino Alvorecer Feudal! Nossa missão é estreitar os laços entre os usuários deste vasto reino, trazendo-lhes as mais recentes novidades e eventos. Aqui, você encontrará um fórum de perguntas e respostas, uma página dedicada a sanar suas dúvidas mais profundas sobre a vida no reino.</C.TLabel>
       <C.Label>Forum Alvorecer Feudal</C.Label>
       <C.Content>
         <Input

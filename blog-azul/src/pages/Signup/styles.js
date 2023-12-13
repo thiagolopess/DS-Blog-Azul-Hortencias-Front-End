@@ -7,6 +7,8 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 10px;
   height: 100vh;
+  background-image: url('/imgs/background.jpeg');
+  background-size: 100% 100%; 
 `;
 
 export const Content = styled.div`
@@ -24,14 +26,16 @@ export const Content = styled.div`
 `;
 
 export const Label = styled.label`
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 600;
-  color: #676767;
+  color: #FFFF00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `;
 
 export const LabelSignin = styled.label`
   font-size: 16px;
-  color: #676767;
+  color: #32CD99;
+  font-weight: 600;
 `;
 
 export const labelError = styled.label`
