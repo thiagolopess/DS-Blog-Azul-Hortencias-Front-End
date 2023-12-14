@@ -26,7 +26,7 @@ const Signin = () => {
       return;
     }
 
-    navigate("/Forums");
+    navigate("/home");
   };
 
   return (
