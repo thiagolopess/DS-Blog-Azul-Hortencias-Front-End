@@ -6,9 +6,9 @@ import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
 import Recovery from "../pages/Recovery";
 import Forum from "../pages/Forum/foruns";
-import GeralForum from "../pages/Forum/NoticiasForum"; // Importe os outros fóruns conforme necessário
-import EscribasForum from "../pages/Forum/GeralForum";
-import NoticiasForum from "../pages/Forum/EscribasForum";
+import GeralForum from "../pages/Forum/GeralForum";
+import EscribasForum from "../pages/Forum/EscribasForum";
+import NoticiasForum from "../pages/Forum/NoticiasForum";
 import EstudosForum from "../pages/Forum/EstudosForum";
 
 const Private = ({ Item }) => {
@@ -22,10 +22,10 @@ const RoutesApp = () => {
     <BrowserRouter>
       <Fragment>
         <Routes>
-          <Route exact path="/home" element={<Private Item={Home} />} />
+          <Route path="/home" element={<Private Item={Home} />} />
           <Route path="/signin" element={<Signin />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route exact path="/recovery" element={<Recovery />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/recovery" element={<Recovery />} />
           <Route path="/forum" element={<Private Item={Forum} />}>
             <Route path="geral" element={<GeralForum />} />
             <Route path="escribas" element={<EscribasForum />} />
