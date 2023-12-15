@@ -1,6 +1,5 @@
 import { Fragment } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Home from "../pages/Home";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
@@ -11,10 +10,8 @@ import EscribasForum from "../pages/Forum/EscribasForum";
 import NoticiasForum from "../pages/Forum/NoticiasForum";
 import EstudosForum from "../pages/Forum/EstudosForum";
 
-const Private = ({ Item }) => {
-  const { signed } = useAuth();
-
-  return signed > 0 ? <Item /> : <Signin />;
+const PrivateRoute = ({ element }) => {
+  return element;
 };
 
 const RoutesApp = () => {
@@ -22,15 +19,15 @@ const RoutesApp = () => {
     <BrowserRouter>
       <Fragment>
         <Routes>
-          <Route path="/home" element={<Private Item={Home} />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/recovery" element={<Recovery />} />
-          <Route path="/forum" element={<Private Item={Forum} />}>
-            <Route path="geral" element={<GeralForum />} />
-            <Route path="escribas" element={<EscribasForum />} />
-            <Route path="noticias" element={<NoticiasForum />} />
-            <Route path="estudos" element={<EstudosForum />} />
+          <Route path="/forum" element={<Forum />}>
+            <Route path="geral" element={<PrivateRoute element={<GeralForum />} />} />
+            <Route path="escribas" element={<PrivateRoute element={<EscribasForum />} />} />
+            <Route path="noticias" element={<PrivateRoute element={<NoticiasForum />} />} />
+            <Route path="estudos" element={<PrivateRoute element={<EstudosForum />} />} />
           </Route>
           <Route path="*" element={<Signin />} />
         </Routes>

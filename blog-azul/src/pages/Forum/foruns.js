@@ -9,7 +9,9 @@ const Foruns = () => {
     navigate(`/forum${forumPath}`);
   };
 
+
   return (
+    
     <>
       <ForumStyles />
       <Container>
@@ -32,6 +34,8 @@ const Foruns = () => {
       </Container>
     </>
   );
+
 };
+
 
 export default Foruns;
