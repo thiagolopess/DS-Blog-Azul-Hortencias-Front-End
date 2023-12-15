@@ -5,6 +5,11 @@ import Home from "../pages/Home";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
 import Recovery from "../pages/Recovery";
+import Forum from "../pages/Forum/foruns";
+import GeralForum from "../pages/Forum/NoticiasForum"; // Importe os outros fóruns conforme necessário
+import EscribasForum from "../pages/Forum/GeralForum";
+import NoticiasForum from "../pages/Forum/EscribasForum";
+import EstudosForum from "../pages/Forum/EstudosForum";
 
 const Private = ({ Item }) => {
   const { signed } = useAuth();
@@ -21,6 +26,12 @@ const RoutesApp = () => {
           <Route path="/signin" element={<Signin />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/recovery" element={<Recovery />} />
+          <Route path="/forum" element={<Private Item={Forum} />}>
+            <Route path="geral" element={<GeralForum />} />
+            <Route path="escribas" element={<EscribasForum />} />
+            <Route path="noticias" element={<NoticiasForum />} />
+            <Route path="estudos" element={<EstudosForum />} />
+          </Route>
           <Route path="*" element={<Signin />} />
         </Routes>
       </Fragment>
