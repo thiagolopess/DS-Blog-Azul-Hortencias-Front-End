@@ -9,18 +9,18 @@ const Foruns = () => {
       <Container>
         <BLabel>Fóruns</BLabel>
         <Content>
-          <h2>Escolha um Fórum:</h2>
+          <h2 class="destacado">Escolha um Fórum:</h2>
           <Link to="/forum/geral">
-            <button>Fórum Geral</button>
+            <button class="botao">Fórum Geral</button>
           </Link>
           <Link to="/forum/escribas">
-            <button>Fórum Escribas</button>
+            <button class="botao">Fórum Escribas</button>
           </Link>
           <Link to="/forum/noticias">
-            <button>Fórum Notícias</button>
+            <button class="botao">Fórum Notícias</button>
           </Link>
           <Link to="/forum/estudos">
-            <button>Fórum Estudos</button>
+            <button class ="botao">Fórum Estudos</button>
           </Link>
         </Content>
       </Container>

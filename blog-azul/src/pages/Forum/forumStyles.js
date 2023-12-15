@@ -20,10 +20,26 @@ export const Content = styled.div`
   flex-direction: column;
   width: 100%;
   box-shadow: 0 1px 2px #0003;
-  background-color: white;
   max-width: 350px;
   padding: 20px;
   border-radius: 5px;
+  .destacado {
+  color: #FFFF00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .botao{
+    padding: 16px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #32CD99;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    max-width: 350px;
+  }
 `;
 
 export const BLabel = styled.label`
